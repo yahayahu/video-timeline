@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Video Timeline</title>
+</head>
+<body>
+<video id="test_video_id" width="100%" controls>
+  <source src="./videos/test-video.mp4" type="video/mp4">
+  <source src="./videos/test-video.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+<script>
+
+  window.requirejs(['video-timeline', "video-timeline-styles"], function ({default: VideoTimeline}) {
+    const testVideo = document.getElementById('test_video_id');
+    new VideoTimeline(testVideo, {
+      withControls: true,
+      containerClass: 'test-video-wrapper-class',
+      videoClass: 'test-video-target-class'
+    });
+  });
+</script>
+</body>
+</html>
