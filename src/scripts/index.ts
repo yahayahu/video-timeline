@@ -1,8 +1,8 @@
-import { IOptions, IVideoTimeline } from '../types';
 import { Controls } from './widgets';
-import { IControls } from '../types/controls';
+import { IControls } from '../interfaces/controls';
+import { IOptions } from '../interfaces/common';
 
-class VideoTimeline implements IVideoTimeline {
+class VideoTimeline {
   readonly video: HTMLVideoElement;
   readonly wrapper: HTMLDivElement;
   private controls: IControls | null;
@@ -26,6 +26,7 @@ class VideoTimeline implements IVideoTimeline {
     if (withControls) {
       this.controls = new Controls(this.video);
     }
+    console.log(this.controls);
   }
 }
 

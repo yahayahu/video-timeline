@@ -2,15 +2,24 @@
   "name": "video-timeline",
   "version": "0.0.0",
   "description": "Video timeline with keyframes",
-  "main": "dist/scripts/video-timeline.js",
   "scripts": {
-    "build": "webpack --config webpack.prod.js",
+    "build": "npm run build:sources && npm run build:minify && npm run create:esm && npm run create:types",
+    "build:minify": "webpack --config webpack.prod.minify.js",
+    "build:sources": "webpack --config webpack.prod.js",
+    "create:types": "tsc -p tsconfig.types.json",
+    "create:esm": "tsc -p tsconfig.esm.json",
     "dev": "webpack serve -open --config webpack.dev.js"
   },
   "keywords": [
     "video",
     "timeline",
-    "keyframes"
+    "keyframes",
+    "media",
+    "mp4",
+    "mp3",
+    "player",
+    "video-player",
+    "html5"
   ],
   "husky": {
     "hooks": {
@@ -22,28 +31,34 @@
       "prettier --write"
     ]
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "author": {
+    "name": "Dmitry Pylnyk",
+    "email": "dmitry.yaha.dev@gmail.com"
   },
-  "author": "yahayahu",
+  "repository": {
+    "url": "https://github.com/yahayahu/video-timeline.git",
+    "type": "git"
+  },
+  "main": "./dist/video-timeline.js",
+  "style": "./dist/video-timeline.css",
+  "module": "./dist/esm/scripts/index.js",
+  "types": "./",
+  "files": [
+    "./dist/*",
+    "./types/*"
+  ],
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@babel/plugin-transform-runtime": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
     "@typescript-eslint/eslint-plugin": "^5.30.4",
     "@typescript-eslint/parser": "^5.30.4",
     "autoprefixer": "^10.4.7",
+    "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^4.0.0",
-    "cssnano": "^5.1.12",
     "eslint": "^8.19.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -51,12 +66,13 @@
     "mini-css-extract-plugin": "^2.6.1",
     "postcss": "^8.4.14",
     "postcss-loader": "^7.0.0",
+    "postcss-preset-env": "^7.7.2",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
     "terser-webpack-plugin": "^5.3.3",
     "ts-loader": "^9.3.0",
-    "typescript": "^4.7.2",
+    "typescript": "^4.7.4",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.3",

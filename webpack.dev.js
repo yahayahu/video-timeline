@@ -4,10 +4,6 @@ const common = require('./webpack.common.js');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = merge(common, {
-  entry: {
-    'video-timeline': './src/scripts/index.ts',
-    'video-timeline-styles': './src/styles/index.scss'
-  },
   mode: 'development',
   devtool: 'inline-source-map',
   resolve: {

@@ -42,7 +42,7 @@ module.exports = {
     ],
     quotes: [2, "single", { "avoidEscape": true }],
     semi: 'error',
-    'no-console': 'error',
+    'no-console': 'warn',
     'prettier/prettier': ['error'],
   },
 };

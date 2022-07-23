@@ -1,7 +1,6 @@
-import { IControls } from '../../types/controls';
 import { formatDuration } from '../utils';
 
-export class Controls implements IControls {
+export class Controls {
   private video: HTMLVideoElement;
   private wrapper?: HTMLDivElement;
   defaultVolume = 75;

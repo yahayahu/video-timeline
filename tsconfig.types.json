@@ -1,0 +1,16 @@
+{
+  "buildOnSave": false,
+  "compileOnSave": false,
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "target": "es6",
+    "declaration": true,
+    "allowJs": true,
+    "emitDeclarationOnly": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "outDir": "./dist/types"
+  },
+  "include": ["./src/interfaces"]
+}

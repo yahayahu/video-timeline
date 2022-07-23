@@ -17,7 +17,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
 <script>
 
-  window.requirejs(['video-timeline', "video-timeline-styles"], function ({default: VideoTimeline}) {
+  console.log(window)
+  window.requirejs(['VideoTimeline'], function ({default: VideoTimeline}) {
     const testVideo = document.getElementById('test_video_id');
     new VideoTimeline(testVideo, {
       withControls: true,
