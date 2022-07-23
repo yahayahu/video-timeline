@@ -3,8 +3,3 @@ export interface IOptions {
   videoClass?: string;
   withControls?: boolean;
 }
-
-interface IVideoTimeline {
-  video: HTMLVideoElement;
-  wrapper: HTMLDivElement;
-}

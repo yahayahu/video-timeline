@@ -1,17 +1,11 @@
-export function formatDuration(time: number): string {
-  const [seconds, millis] = time.toString().split('.');
-  let min = 0;
-  const sec = +seconds;
-  let ms = millis ? +millis.slice(0, 1) : 0;
-  const checkZero = (n: number): string => {
-    const _n = n.toString();
-    return _n.length === 1 ? `0${n}` : _n;
+export function formatDuration(duration: number): string {
+  const mins = Math.floor(duration / 60);
+  const secds = Math.floor(duration - mins * 60);
+
+  const formatCell = (val: number): string => {
+    const _val = val.toString();
+    return _val.length === 1 ? `0${_val}` : _val;
   };
 
-  if (sec >= 60) {
-    min = Math.trunc(sec / 60);
-    ms += sec % 60;
-  }
-
-  return `${checkZero(min)}:${checkZero(sec)}:${checkZero(ms)}`;
+  return `${formatCell(mins)}:${formatCell(secds)}`;
 }
