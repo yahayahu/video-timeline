@@ -9,7 +9,7 @@
     "create:esm": "sh bin/build-esm.sh",
     "commit": "git-cz",
     "test": "jest",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release --branches main"
   },
   "keywords": [
     "video",
