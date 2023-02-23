@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "lib": [
+      "dom",
+      "es2015"
+    ],
+    "target": "es2015",
+    "noImplicitAny": true,
+    "strictPropertyInitialization": false,
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "removeComments": true,
+    "sourceMap": false,
+    "strict": true,
+    "noUnusedParameters": true,
+    "preserveConstEnums": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "emitDecoratorMetadata": true,
+    "module": "commonjs",
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationMap": true,
+    "types": ["node", "jest"],
+    "declarationDir": "./dist/types",
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src/scripts"]
+}
