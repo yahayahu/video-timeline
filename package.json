@@ -1,6 +1,6 @@
 {
   "name": "video-timeline",
-  "version": "0.0.0-development",
+  "version": "1.0.0-development",
   "description": "Video timeline with keyframes",
   "scripts": {
     "dev": "webpack --watch --config webpack.prod.js",
