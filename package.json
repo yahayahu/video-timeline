@@ -1,13 +1,14 @@
 {
   "name": "video-timeline",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "description": "Video timeline with keyframes",
   "scripts": {
     "dev": "webpack --watch --config webpack.prod.js",
     "build": "npm run test && webpack --config webpack.prod.js && npm run create:esm",
     "create:types": "tsc -p tsconfig.types.json",
     "create:esm": "sh bin/build-esm.sh",
-    "test": "jest"
+    "test": "jest",
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "video",
@@ -75,6 +76,7 @@
     "typescript": "^4.9.5",
     "webpack": "^5.75.0",
     "webpack-cli": "^4.10.0",
-    "webpack-merge": "^5.8.0"
+    "webpack-merge": "^5.8.0",
+    "semantic-release": "^20.1.0"
   }
 }
