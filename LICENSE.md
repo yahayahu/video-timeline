@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2022 Dmitry Pylnyk
+Copyright (c) 2023 Dmitry Pylnyk
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
